@@ -51,6 +51,7 @@ footer {
     border-style: outset;*/
     padding: 20px 20px 20px 20px;
     position: relative;
+    background-image: url('img/prism.png');
 }
 
 #games {
@@ -79,7 +80,7 @@ h1 {
 }
 
 .highlight {
-    color: dimgrey;
+    color: grey;
 }
 
 * {box-sizing: border-box}
