@@ -55,6 +55,12 @@ footer {
 
 #games {
     background-color: #E4821F;
+    height: 750px;
+}
+
+#projects {
+    background-color: darkmagenta;
+    height: 750px;
 }
 
 #introduction {
@@ -79,7 +85,7 @@ h1 {
 * {box-sizing: border-box}
 
 .gallery {
-    height: 550px;
+    margin-top:50px;
     margin-left: 0;
     padding: 0;
 }
