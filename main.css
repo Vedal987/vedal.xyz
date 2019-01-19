@@ -1,134 +1,122 @@
-body {
-    background-image: url(img/bg.png);
-    font-family: Arial, Helvetica, sans-serif;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+#landingCarousel {
+    height: 100%;
+    margin-top: -100px;
 }
 
-.navbar {
-    overflow: hidden;
-    background-color: #333;
-}
-
-i {
-    text-decoration: none;
-    font-style: normal;
-}
-
-#o {
-    color: darkorange;
-}
-#p {
-    color: mediumpurple;
-}
-#g {
-    color: limegreen;
-}
-#b {
-    color: skyblue;
-}
-#r {
-    color: red;
-}
-
-.navbar a {
-    float: left;
-    font-size: 18px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-
-.dropdown .dropbtn {
-    font-size: 18px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+#landing {
+    margin-top: 15%;
+    padding-left: 10%;
     z-index: 1;
+    position: absolute;
+    background-color: rgba(100, 100, 100, 0.5);
+    color: white;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-radius: 0px 200px 200px 0px;
 }
 
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+#landing h1 {
+    font-size: 8em;
 }
 
-.dropdown-content a:hover {
-    background-color: #ddd;
+#landing p {
+    font-size: 2em;
+    padding-right: 100px;
 }
 
-.title {
-    font-size: 40px;
-    margin-left: 50px;
-    padding-top: 30px;;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-a {
-    text-decoration: none;
-    color: red;
-}
-
-li {
-    font-size: 18px;
-    padding: 2px 2px 2px 2px;
-}
-
-h2 {
-    font-size: 21px;
-}
-
-#home {
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-color: #333;
-    margin-top: 50px;
-    color: #ddd;
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #eee;
 }
 
 footer {
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-color: #333;
-    margin-top: 50px;
-    color: #ddd;
-}
-
-.content {
-    padding: 20px 50px 20px 50px;
-}
-
-.code {
+    padding-top: 10px;
+    text-align: center;
     background-color: black;
-    /*color: red;*/
-    padding: 15px 15px 15px 15px;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 14px;
+    height: 100%;
+}
+
+.block hr {
+    width: 10%;
+ 
+}
+
+.block {
+    text-align: center;
+    /*background-image: url(img/bg.png);
+    background-repeat: repeat;*/
+    height: 100%;
+    /*border-color: dimgray;
+    border-width: 10px;
+    border-style: outset;*/
+    padding: 20px 20px 20px 20px;
+    position: relative;
+}
+
+#games {
+    background-color: #E4821F;
+}
+
+#introduction {
+    background-color: firebrick;
+}
+
+#introduction p {
+    font-size: 1.5em;
+    width: 50%;
+    margin-left: 25%;
+}
+
+h1 {
+    margin-top: 0px;
+   padding-top: 20px; 
+}
+
+.highlight {
+    color: dimgrey;
+}
+
+* {box-sizing: border-box}
+
+.gallery {
+    height: 550px;
+    margin-left: 0;
+    padding: 0;
+}
+
+.gallery-container {
+    position: relative;
+    width: 20%;
+    height: auto;
+    float: left;
+    margin-left: 4%;
+    margin-bottom: 4%;
+}
+.gallery-image {
+    display: block;
+  width: 100%;
+    height: auto;
+    max-width: 400px;
+}
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+/* When you mouse over the container, fade in the overlay title */
+.gallery-container:hover .overlay {
+  opacity: 1;
+}
+
+.parallax-window {
+    height: 500px;
 }
