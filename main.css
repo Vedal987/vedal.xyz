@@ -38,7 +38,7 @@ footer {
 
 .block hr {
     width: 10%;
- 
+    border-width: 2px;
 }
 
 .block {
@@ -51,17 +51,18 @@ footer {
     border-style: outset;*/
     padding: 20px 20px 20px 20px;
     position: relative;
-    background-image: url('img/prism.png');
+    background-image: url('img/diagmonds.png');
+    border: white 2px solid;
 }
 
 #games {
-    background-color: #E4821F;
-    height: 750px;
+    background-color: cornflowerblue;
+    height: 700px;
 }
 
 #projects {
     background-color: darkmagenta;
-    height: 750px;
+    height: 700px;
 }
 
 #introduction {
@@ -69,6 +70,11 @@ footer {
 }
 
 #introduction p {
+    font-size: 1.5em;
+    width: 50%;
+    margin-left: 25%;
+}
+#introduction li {
     font-size: 1.5em;
     width: 50%;
     margin-left: 25%;
@@ -89,6 +95,7 @@ h1 {
     margin-top:50px;
     margin-left: 0;
     padding: 0;
+    margin-left: 13.5%;
 }
 
 .gallery-container {
@@ -96,14 +103,15 @@ h1 {
     width: 20%;
     height: auto;
     float: left;
-    margin-left: 4%;
-    margin-bottom: 4%;
+    margin-left: 1%;
+    margin-bottom: 1%;
 }
 .gallery-image {
     display: block;
   width: 100%;
     height: auto;
     max-width: 400px;
+    border: 2px white solid;
 }
 .overlay {
   position: absolute; 
