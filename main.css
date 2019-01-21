@@ -193,6 +193,9 @@ h1 {
         width: 60%;
         margin-left: 20%;
     }
+    .overlay {
+        padding: 15px;
+    }
 }
 
 @media only screen and (max-width: 800px) {
