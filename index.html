@@ -6,6 +6,29 @@
     <title>Vedal</title>
     
     <script src="pace.min.js"></script>
+    <style>
+    .pace {
+      -webkit-pointer-events: none;
+      pointer-events: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    .pace-inactive {
+      display: none;
+    }
+
+    .pace .pace-progress {
+      background-color: rgba(22, 22, 22, 0.19999999999999996);
+      position: fixed;
+      z-index: -1;
+      top: 0;
+      right: 100%;
+      bottom: 0;
+      width: 100%;
+    }
+    </style>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
