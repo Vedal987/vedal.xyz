@@ -17,13 +17,17 @@ body {
     display: inline-block;
 }
 
+.carousel-inner {
+    height: 100%;
+}
+
 .carousel-inner>.item>img {
     display: block;
     height: 100%;
-    width: auto;
+    width: 100%;
     object-fit: cover;
+    max-height:100%;
 }
-
 
 #landing {
     margin-top: 15%;
@@ -155,6 +159,19 @@ h1 {
 
 .parallax-window {
     height: 500px;
+}
+
+.modal-content {
+    background-color: #222;
+}
+.close {
+    color: #eee;
+    text-shadow: 0 1px 0 #000;
+    filter: alpha(opacity=80);
+    opacity: .8;
+}
+.close:hover {
+    color: #888;
 }
 
 @media only screen and (max-width: 1600px) {
