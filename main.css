@@ -259,6 +259,9 @@ h1 {
     .overlay {
         padding: 10px;
     }
+    #introduction p {
+    font-size: 1em;
+}
 }
 
 @media only screen and (max-width: 600px) {
