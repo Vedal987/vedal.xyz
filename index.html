@@ -84,6 +84,7 @@
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav">
                   <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#featured">Featured</a></li>
                   <li><a href="#games">Games</a></li>
                     <li><a href="#projects">Projects</a></li>
                   <!--<li class="dropdown">
@@ -97,8 +98,9 @@
                   </li>-->
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="https://twitter.com/Vedal987" target="_blank">Twitter</a></li>
-                    <li><a href="https://discordapp.com" target="_blank">Vedal#9787</a></li>
+                    <li><a href="https://www.twitch.tv/vedal987" target="_blank"><img src="img/twitch-icon.png" class="icon"> vedal987</a></li>
+                    <li><a href="https://twitter.com/Vedal987" target="_blank"><img src="img/twitter-icon.png" class="icon">@Vedal987</a></li>
+                    <li><a href="https://discordapp.com" target="_blank"><img src="img/discord-icon.png" class="icon">Vedal#9787</a></li>
                 </ul>
             </div>
           </div>
@@ -107,7 +109,7 @@
     
   <div id="landing">
     <h1>Vedal</h1> 
-    <p>I make games, everything from RPGs to First Person Shooters.</p> 
+    <p>I like to program everything from neural networks, to virtual reality RPGs.</p> 
   </div>
     
     
@@ -121,12 +123,13 @@
       </ol>
 
     <div class="carousel-inner">
+        
+        <div class="item">
+          <img src="img/Arachnid.png" alt="Age of Darkness">
+        </div>
+        
         <div class="item active" id="dragon">
             <img src="img/DragonBlur.png" alt="Age of Darkness">
-        </div>
-
-        <div class="item">
-          <img src="img/KnightBlur.png" alt="Age of Darkness">
         </div>
 
           <div class="item">
@@ -134,7 +137,7 @@
         </div>
         
         <div class="item">
-          <img src="img/Arachnid.png" alt="Age of Darkness">
+          <img src="img/KnightBlur.png" alt="Age of Darkness">
         </div>
 
           <!--<div class="item">
@@ -154,10 +157,30 @@
         <h2><span class="highlight">Name:</span> Jack</h2>
         <h2><span class="highlight">Location:</span> Sheffield, UK</h2>
         <p>In my free time, I like to play games, make them, and work on other cool projects. I've compiled a list of them here that I'll be updating as I make more things in the future.</p>
-        <p>I am experienced in: C#, Python, JavaScript and HTML/CSS. </p>
+        <p>I am experienced in: Unity, C#, Python, JavaScript and HTML/CSS. </p>
     </div>
     
     <div class="parallax-window" data-parallax="scroll" data-image-src="img/Village.png"></div>
+    
+    <div id="featured" class="block">
+        <h1><strong>Featured Games/Projects</strong></h1>
+        <hr>
+        <div class="feature">
+            
+            <img src="img/honesty.gif" class="feature-img">
+            <h2>Neuro-sama</h2>
+            <p>I built a neural network that learned to aim on the popular rhythm game osu! using Python. The entire project was livestreamed to Twitch almost 24/7 and quickly became a success after gaining over 150,000 views in 30 days. The neural network itself, dubbed "Neuro-sama", developed over time, starting off as a simple self-made feed forward neural network and eventually becoming a large convolutional neural network powered by Tensorflow. This was my first proper project with a neural network but will definitely not be the last. You can watch a video showcasing the neural network <a href="https://www.youtube.com/watch?v=w_ntORdHWsU" target="_blank">here</a>.</p>
+        </div>
+        <div class="feature">
+            
+            <img src="img/AgeOfDarkness.png" class="feature-img">
+            <h2>Age of Darkness</h2>
+            <p>The player's journey begins in a medieval village terrorized by a multitude of different terrifying enemies that are led by a fearsome dragon. The player can converse with NPCs around the village by simply shaking their hand and receive quests through the games questing system. They can cast spells using gesture recognition with the wand, fight multiple monsters in real-time combat using the trajectory predicting bow and the infamous Sword of Light that the prophecy foretold of. The player must increase the power of the Sword of Light using the souls of enemies until they can raise an army against the dragon and eventually potentially save the village. You can watch the trailer <a href="https://www.youtube.com/watch?v=IjtZeur9z_0" target="_blank">here</a>.</p>
+        </div>
+        
+    </div>
+    
+    <div class="parallax-window" data-parallax="scroll" data-image-src="img/Environment.png"></div>
     
     <div id="games" class="block">
     <h1><strong>Games</strong></h1>
@@ -235,6 +258,7 @@
                     <h4 class="modal-title">DeltaFire</h4>
                   </div>
                   <div class="modal-body">
+                      <img src="img/DeltaFire1.png" class="img-responsive">
                       <p>DeltaFire is an ambitious multiplayer first person shooter and the successor to the award winning Scoped. It is being developed in Unity and uses Photon Networking for the multiplayer API and hosting. The game currently features 3 maps, 1 game mode, fully animated character models, 3 animated weapons and incredible graphics.</p>
                   </div>
                   <div class="modal-footer">
@@ -359,6 +383,7 @@
                     <h4 class="modal-title">VR Minecraft</h4>
                   </div>
                   <div class="modal-body">
+                      <img src="img/VRMinecraft.jpg" class="img-responsive">
                       <p>For a school open evening I was tasked with creating a short interactive demo for potential students so I recreated the basics of Minecraft in virtual reality using the Steam VR API in Unity. It features a basic inventory system, physics, movement and mining.</p>
                   </div>
                   <div class="modal-footer">
@@ -385,6 +410,31 @@
         <div class="gallery">
             
             <p style="margin-left:-15%">Click on the projects to find out more.</p>
+            
+            <div class="gallery-container" data-toggle="modal" data-target="#modalVedal">
+        <img src="img/NeuroSama.png" alt="vedal.xyz" class="gallery-image">
+        <div class="overlay">osu! Neural Network</div>
+        </div>
+            
+            <div id="modalVedal" class="modal fade" role="dialog">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">osu! Neural Network</h4>
+                  </div>
+                  <div class="modal-body">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/w_ntORdHWsU"></iframe>
+                      </div>
+                      <p>I built a neural network that learned to aim on the popular rhythm game osu! using Python and Keras with Tensorflow. The project quickly became a success after being livestreamed on twitch and within 30 days it had gained over 150,000 views.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
         
             <div class="gallery-container" data-toggle="modal" data-target="#modalTicTacToe">
         <img src="img/TicTacToe.png" alt="Tic Tac Toe Machine Learning" class="gallery-image">
@@ -399,6 +449,7 @@
                     <h4 class="modal-title">Tic Tac Toe Machine Learning</h4>
                   </div>
                   <div class="modal-body">
+                      <img src="img/TicTacToe.png" class="img-responsive">
                       <p>Using Python I created a decision tree based Artificial Intelligence that learns by itself, with about 10 minutes of training it becomes unbeatable meaning it is only possible to lose or draw to this bot as it makes perfect decisions. These decisions are based on thousands of games that it has played with itself in order to slowly improve.</p>
                   </div>
                   <div class="modal-footer">
@@ -407,6 +458,9 @@
                 </div>
               </div>
             </div>
+            
+            
+            
             
             <div class="gallery-container" data-toggle="modal" data-target="#modalPacMan">
         <img src="img/MachineLearningPacman.jpg" alt="Pac-Man Machine Learnin" class="gallery-image">
@@ -421,6 +475,7 @@
                     <h4 class="modal-title">Pac-Man Machine Learning</h4>
                   </div>
                   <div class="modal-body">
+                      <img src="img/MachineLearningPacman.jpg" class="img-responsive">
                       <p>Using Unity and C# I created a bot that learns to play a 3D version of Pac-Man that I created. It was inspired by <a href="https://www.youtube.com/watch?v=Yo2SepcNyw4" target="_blank"> this video</a> and after several hours of training it became better than me at the game.</p>
                   </div>
                   <div class="modal-footer">
@@ -443,6 +498,7 @@
                     <h4 class="modal-title">Connect 4 Machine Learning</h4>
                   </div>
                   <div class="modal-body">
+                      <img src="img/Connect4.png" class="img-responsive">
                       <p>Using Python I created a decision tree based Artificial Intelligence that learns by itself to play Connect 4. I left this training for several days until the model size was several gigabytes big, this was due to the vast number of possible outcomes in Connect 4. By this time the bot had become moderately good at Connect 4 but was not perfect as it had not been training for long enough. The entire event was streamed at Twitch for viewers to watch.</p>
                   </div>
                   <div class="modal-footer">
@@ -465,7 +521,8 @@
                     <h4 class="modal-title">Alice</h4>
                   </div>
                   <div class="modal-body">
-                      <p>Alice is a voice controlled AI that I created using Python, a Rasperry Pi and some programmable LED lights. The AI is always listening and wakes when hearing "Alice" to respond to many commands that mostly control the lighting in my room. This means I can say "Alice lights rainbow" for a cool RGB rainbow theme in my room. The bot also interacts with my computer through a web server so that I can send commands from a python terminal on my computer or Alice can control specific elements on my computer like applications open or turn it off.</p>
+                      <img src="img/Alice.jpg" class="img-responsive">
+                      <p>Alice is a voice controlled AI that I created using Python, a Rasperry Pi and some programmable LED lights. The AI is always listening and wakes when hearing "Alice" to respond to many commands that mostly control the lighting in my room. This means I can say "Alice lights rainbow" for a cool RGB rainbow theme in my room. The bot also interacts with my computer through a web server so that I can send commands from a python terminal on my computer or Alice can control specific elements on my computer like applications open or turn itself off.</p>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -487,6 +544,7 @@
                     <h4 class="modal-title">Twitch Plays Dragon Quest IX</h4>
                   </div>
                   <div class="modal-body">
+                      <img src="img/TwitchPlaysDragonQuest.png" class="img-responsive">
                       <p>Inspired by the likes of TwitchPlaysPokemon I created a python program that listens to my twitch chat and interprets commands like "A" or "Right 5" in order to play Dragon Quest IX through the desmume emulator. The twitch chat ended up surprisingly getting quite far into the game and it was cool to see a small community work together like that.</p>
                   </div>
                   <div class="modal-footer">
@@ -519,6 +577,8 @@
               </div>
             </div>
             
+            
+            
             <div class="gallery-container" data-toggle="modal" data-target="#modalBot">
         <img src="img/donttap.png" alt="donttap.com Bot" class="gallery-image">
         <div class="overlay">donttap.com Bot</div>
@@ -532,6 +592,7 @@
                     <h4 class="modal-title">donttap.com Bot</h4>
                   </div>
                   <div class="modal-body">
+                      <img src="img/donttap.png" class="img-responsive">
                       <p>After being challenged by my friend to beat him at donttap.com and failing substantially I loaded up Python and set up a bot that automatically detected where the black tiles were on screen in order to click them. After a lot of optimisation I ended up reaching a high score of 2511 which was by far the highest I had seen any body (or bot) get on the game and definitely my friend.</p>
                   </div>
                   <div class="modal-footer">
@@ -541,27 +602,9 @@
               </div>
             </div>
             
-            <div class="gallery-container" data-toggle="modal" data-target="#modalVedal">
-        <img src="img/vedal.xyz.jpg" alt="vedal.xyz" class="gallery-image">
-        <div class="overlay">vedal.xyz</div>
-        </div>
             
-            <div id="modalVedal" class="modal fade" role="dialog">
-              <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">vedal.xyz</h4>
-                  </div>
-                  <div class="modal-body">
-                      <p>A simple, responsive, informative portfolio made using HTML/CSS incorporating Bootstrap as the base framework.</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
+            
             
         </div>
         </center>
