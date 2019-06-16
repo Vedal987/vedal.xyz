@@ -221,6 +221,14 @@ h1 {
     color: firebrick
 }
 
+.navbar-right img {
+    transition: .2s ease;
+}
+
+.navbar-right li:hover img {
+    transform: scale(1.2);
+}
+
 @media only screen and (max-width: 4000px) {
     .feature {
         height: 700px;
