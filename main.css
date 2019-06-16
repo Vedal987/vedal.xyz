@@ -233,6 +233,14 @@ h1 {
     cursor: pointer;
 }
 
+#navbar-brand-logo {
+    color: #eee;
+}
+
+#navbar-brand-logo:hover {
+    color: #fff;
+}
+
 @media only screen and (max-width: 4000px) {
     .feature {
         height: 700px;
