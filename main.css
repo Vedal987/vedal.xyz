@@ -229,6 +229,10 @@ h1 {
     transform: scale(1.2);
 }
 
+.feature img {
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 4000px) {
     .feature {
         height: 700px;
