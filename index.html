@@ -7,7 +7,7 @@
     
     <script src="pace.min.js"></script>
     <style>
-    .pace {
+    /*.pace {
       -webkit-pointer-events: none;
       pointer-events: none;
       -webkit-user-select: none;
@@ -20,14 +20,91 @@
     }
 
     .pace .pace-progress {
-      background-color: rgba(22, 22, 22, 0.19999999999999996);
+      background-color: rgba(0, 0, 0, 1);
       position: fixed;
-      z-index: -1;
+      z-index: 5;
       top: 0;
       right: 100%;
       bottom: 0;
       width: 100%;
-    }
+    }*/
+    .pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace .pace-activity {
+  display: block;
+  position: fixed;
+  z-index: 2000;
+  bottom: 0;
+  right: 0;
+  margin-bottom: -300px;
+  width: 300px;
+  height: 300px;
+  background: #000000;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transform: translateX(100%) translateY(100%) rotate(45deg);
+  transform: translateX(100%) translateY(100%) rotate(135deg);
+  pointer-events: none;
+}
+
+.pace.pace-active .pace-activity {
+  -webkit-transform: translateX(50%) translateY(-50%) rotate(45deg);
+  transform: translateX(50%) translateY(-50%) rotate(135deg);
+}
+
+.pace .pace-activity::before,
+.pace .pace-activity::after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    display: block;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    content: '';
+}
+
+.pace .pace-activity::before {
+    margin-left: -40px;
+    width: 80px;
+    height: 80px;
+    border-right-color: rgba(0, 0, 0, .2);
+    border-left-color: rgba(0, 0, 0, .2);
+    -webkit-animation: pace-theme-corner-indicator-spin 3s linear infinite;
+    animation: pace-theme-corner-indicator-spin 3s linear infinite;
+}
+
+.pace .pace-activity::after {
+    bottom: 50px;
+    margin-left: -20px;
+    width: 40px;
+    height: 40px;
+    border-top-color: rgba(0, 0, 0, .2);
+    border-bottom-color: rgba(0, 0, 0, .2);
+    -webkit-animation: pace-theme-corner-indicator-spin 1s linear infinite;
+    animation: pace-theme-corner-indicator-spin 1s linear infinite;
+}
+
+@-webkit-keyframes pace-theme-corner-indicator-spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(359deg); }
+}
+@keyframes pace-theme-corner-indicator-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+
+
+
+
     </style>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -125,23 +202,23 @@
     <div class="carousel-inner">
         
         <div class="item">
-          <img src="img/Arachnid.png" alt="Age of Darkness">
+          <img src="img/Arachnid.jpg" alt="Age of Darkness">
         </div>
         
         <div class="item active" id="dragon">
-            <img src="img/DragonBlur.png" alt="Age of Darkness">
+            <img src="img/DragonBlur.jpg" alt="Age of Darkness">
         </div>
 
           <div class="item">
-          <img src="img/DeltaFire1.png" alt="DeltaFire">
+          <img src="img/DeltaFire1.jpg" alt="DeltaFire">
         </div>
         
         <div class="item">
-          <img src="img/KnightBlur.png" alt="Age of Darkness">
+          <img src="img/KnightBlur.jpg" alt="Age of Darkness">
         </div>
 
           <!--<div class="item">
-          <img src="img/TheRainOfNightLanding.png" alt="Knight">
+          <img src="img/TheRainOfNightLanding.jpg" alt="Knight">
         </div>-->
     </div>
         
@@ -160,7 +237,7 @@
         <p>I am experienced in: Unity, C#, Python, JavaScript w/ JQuery and HTML/CSS. </p>
     </div>
     
-    <div class="parallax-window" data-parallax="scroll" data-image-src="img/Village.png"></div>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="img/Village.jpg"></div>
     
     <div id="featured" class="block">
         <h1><strong>Featured Games/Projects</strong></h1>
@@ -173,14 +250,14 @@
         </div>
         <div class="feature">
             
-            <img src="img/AgeOfDarkness.png" class="feature-img">
+            <img src="img/AgeOfDarkness.jpg" class="feature-img">
             <h2>Age of Darkness</h2>
             <p>The player's journey begins in a medieval village terrorized by a multitude of different terrifying enemies that are led by a fearsome dragon. The player can converse with NPCs around the village by simply shaking their hand and receive quests through the games questing system. They can cast spells using gesture recognition with the wand, fight multiple monsters in real-time combat using the trajectory predicting bow and the infamous Sword of Light that the prophecy foretold of. The player must increase the power of the Sword of Light using the souls of enemies until they can raise an army against the dragon and eventually potentially save the village. You can watch the trailer <a href="https://www.youtube.com/watch?v=IjtZeur9z_0" target="_blank">here</a>.</p>
         </div>
         
     </div>
     
-    <div class="parallax-window" data-parallax="scroll" data-image-src="img/Environment.png"></div>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="img/Environment.jpg"></div>
     
     <div id="games" class="block">
     <h1><strong>Games</strong></h1>
@@ -194,7 +271,7 @@
             <p style="margin-left:-15%">Click on the games to find out more.</p>
         
             <div class="gallery-container" data-toggle="modal" data-target="#modalAgeOfDarkness">
-        <img src="img/AgeOfDarkness.png" alt="Age of Darkness" class="gallery-image">
+        <img src="img/AgeOfDarkness.jpg" alt="Age of Darkness" class="gallery-image">
         <div class="overlay">Age of Darkness</div>
         </div>
             
@@ -246,7 +323,7 @@
             
             
             <div class="gallery-container" data-toggle="modal" data-target="#modalDeltaFire">
-        <img src="img/DeltaFire2.png" alt="DeltaFire" class="gallery-image">
+        <img src="img/DeltaFire2.jpg" alt="DeltaFire" class="gallery-image">
         <div class="overlay">DeltaFire</div>
         </div>
             
@@ -258,7 +335,7 @@
                     <h4 class="modal-title">DeltaFire</h4>
                   </div>
                   <div class="modal-body">
-                      <img src="img/DeltaFire1.png" class="img-responsive">
+                      <img src="img/DeltaFire1.jpg" class="img-responsive">
                       <p>DeltaFire is an ambitious multiplayer first person shooter and the successor to the award winning Scoped. It is being developed in Unity and uses Photon Networking for the multiplayer API and hosting. The game currently features 3 maps, 1 game mode, fully animated character models, 3 animated weapons and incredible graphics.</p>
                   </div>
                   <div class="modal-footer">
@@ -269,7 +346,7 @@
             </div>
             
             <div class="gallery-container" data-toggle="modal" data-target="#modalRainOfNight">
-        <img src="img/TheRainOfNight.png" alt="The Rain of Night" class="gallery-image">
+        <img src="img/TheRainOfNight.jpg" alt="The Rain of Night" class="gallery-image">
         <div class="overlay">The Rain of Night</div>
         </div>
             
@@ -294,7 +371,7 @@
             </div>
             
             <div class="gallery-container" data-toggle="modal" data-target="#modalEscapeEarth">
-        <img src="img/EscapeEarth.png" alt="Escape Earth" class="gallery-image">
+        <img src="img/EscapeEarth.jpg" alt="Escape Earth" class="gallery-image">
         <div class="overlay">Escape Earth</div>
         </div>
             
@@ -306,9 +383,9 @@
                     <h4 class="modal-title">Escape Earth</h4>
                   </div>
                   <div class="modal-body">
-                      <img class="img-responsive" src="img/EscapeEarth1.png">
-                      <img class="img-responsive" src="img/EscapeEarth2.png">
-                      <img class="img-responsive" src="img/EscapeEarth.png">
+                      <img class="img-responsive" src="img/EscapeEarth1.jpg">
+                      <img class="img-responsive" src="img/EscapeEarth2.jpg">
+                      <img class="img-responsive" src="img/EscapeEarth.jpg">
                       <p>Escape Earth was developed for Ludum Dare 42, a game jam in which you have 72 hours to make a complete game from scratch. The theme for Ludum Dare 42 was "Running out of space". You can play the game here: <a href="https://vedal.itch.io/escape-earth" target="_blank">https://vedal.itch.io/escape-earth</a></p>
                   </div>
                   <div class="modal-footer">
@@ -346,7 +423,7 @@
             
             
             <div class="gallery-container" data-toggle="modal" data-target="#modalFalconHeavy">
-        <img src="img/UnityRockets.png" alt="Unity Rockets" class="gallery-image">
+        <img src="img/UnityRockets.jpg" alt="Unity Rockets" class="gallery-image">
         <div class="overlay">Falcon Heavy in Unity</div>
         </div>
             
@@ -400,7 +477,7 @@
         
     </div>
     
-    <div class="parallax-window" data-parallax="scroll" data-image-src="img/DragonFly2.png"></div>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="img/DragonFly2.jpg"></div>
     
     <div id="projects" class="block">
     <h1><strong>Projects</strong></h1>
@@ -412,7 +489,7 @@
             <p style="margin-left:-15%">Click on the projects to find out more.</p>
             
             <div class="gallery-container" data-toggle="modal" data-target="#modalVedal">
-        <img src="img/NeuroSama.png" alt="vedal.xyz" class="gallery-image">
+        <img src="img/NeuroSama.jpg" alt="vedal.xyz" class="gallery-image">
         <div class="overlay">osu! Neural Network</div>
         </div>
             
@@ -437,7 +514,7 @@
             </div>
         
             <div class="gallery-container" data-toggle="modal" data-target="#modalTicTacToe">
-        <img src="img/TicTacToe.png" alt="Tic Tac Toe Machine Learning" class="gallery-image">
+        <img src="img/TicTacToe.jpg" alt="Tic Tac Toe Machine Learning" class="gallery-image">
         <div class="overlay">Tic Tac Toe Machine Learning</div>
         </div>
             
@@ -449,7 +526,7 @@
                     <h4 class="modal-title">Tic Tac Toe Machine Learning</h4>
                   </div>
                   <div class="modal-body">
-                      <img src="img/TicTacToe.png" class="img-responsive">
+                      <img src="img/TicTacToe.jpg" class="img-responsive">
                       <p>Using Python I created a decision tree based Artificial Intelligence that learns by itself, with about 10 minutes of training it becomes unbeatable meaning it is only possible to lose or draw to this bot as it makes perfect decisions. These decisions are based on thousands of games that it has played with itself in order to slowly improve.</p>
                   </div>
                   <div class="modal-footer">
@@ -486,7 +563,7 @@
             </div>
             
             <div class="gallery-container" data-toggle="modal" data-target="#modalConnect4">
-        <img src="img/Connect4.png" alt="Connect 4 Machine Learning" class="gallery-image">
+        <img src="img/Connect4.jpg" alt="Connect 4 Machine Learning" class="gallery-image">
         <div class="overlay">Connect 4 Machine Learning</div>
         </div>
             
@@ -498,7 +575,7 @@
                     <h4 class="modal-title">Connect 4 Machine Learning</h4>
                   </div>
                   <div class="modal-body">
-                      <img src="img/Connect4.png" class="img-responsive">
+                      <img src="img/Connect4.jpg" class="img-responsive">
                       <p>Using Python I created a decision tree based Artificial Intelligence that learns by itself to play Connect 4. I left this training for several days until the model size was several gigabytes big, this was due to the vast number of possible outcomes in Connect 4. By this time the bot had become moderately good at Connect 4 but was not perfect as it had not been training for long enough. The entire event was streamed at Twitch for viewers to watch.</p>
                   </div>
                   <div class="modal-footer">
@@ -532,7 +609,7 @@
             </div>
             
         <div class="gallery-container" data-toggle="modal" data-target="#modalTwitch">
-        <img src="img/TwitchPlaysDragonQuest.png" alt="Twitch Plays Dragon Quest IX" class="gallery-image">
+        <img src="img/TwitchPlaysDragonQuest.jpg" alt="Twitch Plays Dragon Quest IX" class="gallery-image">
         <div class="overlay">Twitch Plays Dragon Quest IX</div>
         </div>
             
@@ -544,7 +621,7 @@
                     <h4 class="modal-title">Twitch Plays Dragon Quest IX</h4>
                   </div>
                   <div class="modal-body">
-                      <img src="img/TwitchPlaysDragonQuest.png" class="img-responsive">
+                      <img src="img/TwitchPlaysDragonQuest.jpg" class="img-responsive">
                       <p>Inspired by the likes of TwitchPlaysPokemon I created a python program that listens to my twitch chat and interprets commands like "A" or "Right 5" in order to play Dragon Quest IX through the desmume emulator. The twitch chat ended up surprisingly getting quite far into the game and it was cool to see a small community work together like that.</p>
                   </div>
                   <div class="modal-footer">
@@ -555,7 +632,7 @@
             </div>
             
         <div class="gallery-container" data-toggle="modal" data-target="#modalPokemon">
-        <img src="img/BrandWheel.png" alt="Python Plays Pokémon" class="gallery-image">
+        <img src="img/BrandWheel.jpg" alt="Python Plays Pokémon" class="gallery-image">
         <div class="overlay">Vivid Brand Wheel</div>
         </div>
             
@@ -567,7 +644,7 @@
                     <h4 class="modal-title">Vivid Brand Wheel</h4>
                   </div>
                   <div class="modal-body">
-                      <img src="img/BrandWheel.png" class="img-responsive">
+                      <img src="img/BrandWheel.jpg" class="img-responsive">
                       <p>For work experience, I created a responsive, dynamic web app whereby clients can input information to be displayed on the host machine using PHP. This is used by <a href="https://vividcreative.com" target="_blank">Vivid Creative</a> and includes both a client and server website along with a customisable JSON options file and their unique branding.</p>
                   </div>
                   <div class="modal-footer">
@@ -580,7 +657,7 @@
             
             
             <div class="gallery-container" data-toggle="modal" data-target="#modalBot">
-        <img src="img/donttap.png" alt="donttap.com Bot" class="gallery-image">
+        <img src="img/donttap.jpg" alt="donttap.com Bot" class="gallery-image">
         <div class="overlay">donttap.com Bot</div>
         </div>
             
@@ -592,7 +669,7 @@
                     <h4 class="modal-title">donttap.com Bot</h4>
                   </div>
                   <div class="modal-body">
-                      <img src="img/donttap.png" class="img-responsive">
+                      <img src="img/donttap.jpg" class="img-responsive">
                       <p>After being challenged by my friend to beat him at donttap.com and failing substantially I loaded up Python and set up a bot that automatically detected where the black tiles were on screen in order to click them. After a lot of optimisation I ended up reaching a high score of 2511 which was by far the highest I had seen any body (or bot) get on the game and definitely my friend.</p>
                   </div>
                   <div class="modal-footer">
@@ -611,7 +688,7 @@
         
     </div>
     
-    <div class="parallax-window" data-parallax="scroll" data-image-src="img/DragonFly1.png"></div>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="img/DragonFly1.jpg"></div>
      
     <footer>
     <p>Copyright &copy; Vedal 2019</p>
