@@ -7,104 +7,79 @@
     
     <script src="pace.min.js"></script>
     <style>
-    /*.pace {
+    .pace {
       -webkit-pointer-events: none;
       pointer-events: none;
+
       -webkit-user-select: none;
       -moz-user-select: none;
       user-select: none;
     }
 
-    .pace-inactive {
-      display: none;
+    .pace .pace-activity {
+      display: block;
+      position: fixed;
+      z-index: 2000;
+      bottom: 0;
+      right: 0;
+      margin-bottom: -300px;
+      width: 300px;
+      height: 300px;
+      background: #000000;
+      -webkit-transition: -webkit-transform 0.3s;
+      transition: transform 0.3s;
+      -webkit-transform: translateX(100%) translateY(100%) rotate(45deg);
+      transform: translateX(100%) translateY(100%) rotate(135deg);
+      pointer-events: none;
     }
 
-    .pace .pace-progress {
-      background-color: rgba(0, 0, 0, 1);
-      position: fixed;
-      z-index: 5;
-      top: 0;
-      right: 100%;
-      bottom: 0;
-      width: 100%;
-    }*/
-    .pace {
-  -webkit-pointer-events: none;
-  pointer-events: none;
+    .pace.pace-active .pace-activity {
+      -webkit-transform: translateX(50%) translateY(-50%) rotate(45deg);
+      transform: translateX(50%) translateY(-50%) rotate(135deg);
+    }
 
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
+    .pace .pace-activity::before,
+    .pace .pace-activity::after {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        display: block;
+        border: 5px solid #fff;
+        border-radius: 50%;
+        content: '';
+    }
 
-.pace .pace-activity {
-  display: block;
-  position: fixed;
-  z-index: 2000;
-  bottom: 0;
-  right: 0;
-  margin-bottom: -300px;
-  width: 300px;
-  height: 300px;
-  background: #000000;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  -webkit-transform: translateX(100%) translateY(100%) rotate(45deg);
-  transform: translateX(100%) translateY(100%) rotate(135deg);
-  pointer-events: none;
-}
+    .pace .pace-activity::before {
+        margin-left: -40px;
+        width: 80px;
+        height: 80px;
+        border-right-color: rgba(0, 0, 0, .2);
+        border-left-color: rgba(0, 0, 0, .2);
+        -webkit-animation: pace-theme-corner-indicator-spin 3s linear infinite;
+        animation: pace-theme-corner-indicator-spin 3s linear infinite;
+    }
 
-.pace.pace-active .pace-activity {
-  -webkit-transform: translateX(50%) translateY(-50%) rotate(45deg);
-  transform: translateX(50%) translateY(-50%) rotate(135deg);
-}
+    .pace .pace-activity::after {
+        bottom: 50px;
+        margin-left: -20px;
+        width: 40px;
+        height: 40px;
+        border-top-color: rgba(0, 0, 0, .2);
+        border-bottom-color: rgba(0, 0, 0, .2);
+        -webkit-animation: pace-theme-corner-indicator-spin 1s linear infinite;
+        animation: pace-theme-corner-indicator-spin 1s linear infinite;
+    }
 
-.pace .pace-activity::before,
-.pace .pace-activity::after {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    display: block;
-    border: 5px solid #fff;
-    border-radius: 50%;
-    content: '';
-}
-
-.pace .pace-activity::before {
-    margin-left: -40px;
-    width: 80px;
-    height: 80px;
-    border-right-color: rgba(0, 0, 0, .2);
-    border-left-color: rgba(0, 0, 0, .2);
-    -webkit-animation: pace-theme-corner-indicator-spin 3s linear infinite;
-    animation: pace-theme-corner-indicator-spin 3s linear infinite;
-}
-
-.pace .pace-activity::after {
-    bottom: 50px;
-    margin-left: -20px;
-    width: 40px;
-    height: 40px;
-    border-top-color: rgba(0, 0, 0, .2);
-    border-bottom-color: rgba(0, 0, 0, .2);
-    -webkit-animation: pace-theme-corner-indicator-spin 1s linear infinite;
-    animation: pace-theme-corner-indicator-spin 1s linear infinite;
-}
-
-@-webkit-keyframes pace-theme-corner-indicator-spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(359deg); }
-}
-@keyframes pace-theme-corner-indicator-spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(359deg); }
-}
-
-
-
-
+    @-webkit-keyframes pace-theme-corner-indicator-spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(359deg); }
+    }
+    @keyframes pace-theme-corner-indicator-spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(359deg); }
+    }
     </style>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -164,15 +139,6 @@
                     <li><a href="#featured">Featured</a></li>
                   <li><a href="#games">Games</a></li>
                     <li><a href="#projects">Projects</a></li>
-                  <!--<li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Games
-                    <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Age of Darkness</a></li>
-                      <li><a href="#">World of Creatures</a></li>
-                      <li><a href="#">DeltaFire</a></li>
-                    </ul>
-                  </li>-->
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="https://www.twitch.tv/vedal987" target="_blank"><img src="img/twitch-icon.png" class="icon"> vedal987</a></li>
@@ -186,7 +152,7 @@
     
   <div id="landing">
     <h1>Vedal</h1> 
-    <p>I like to program everything from neural networks, to virtual reality RPGs.</p> 
+    <p>I like to make everything from neural networks, to virtual reality RPGs.</p> 
   </div>
     
     
@@ -268,7 +234,7 @@
         <center>
         <div class="gallery">
             
-            <p style="margin-left:-15%">Click on the games to find out more.</p>
+            <p class="gallery-p">Click on the games to find out more.</p>
         
             <div class="gallery-container" data-toggle="modal" data-target="#modalAgeOfDarkness">
         <img src="img/AgeOfDarkness.jpg" alt="Age of Darkness" class="gallery-image">
@@ -486,7 +452,7 @@
         <center>
         <div class="gallery">
             
-            <p style="margin-left:-15%">Click on the projects to find out more.</p>
+            <p class="gallery-p">Click on the projects to find out more.</p>
             
             <div class="gallery-container" data-toggle="modal" data-target="#modalVedal">
         <img src="img/NeuroSama.jpg" alt="vedal.xyz" class="gallery-image">
