@@ -96,6 +96,11 @@ footer {
     background-color: firebrick;
 }
 
+#contact {
+    height: auto;
+    background-color: black;
+}
+
 #featured {
     background-color: turquoise;
     height: auto;
@@ -219,7 +224,11 @@ h1 {
 }
 
 .feature a {
-    color: firebrick
+    color: firebrick;
+}
+
+#contact a {
+    color: firebrick;
 }
 
 .navbar-right img {
